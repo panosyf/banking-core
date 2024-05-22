@@ -8,6 +8,7 @@
     <packaging>pom</packaging>
     <name>banking-core</name>
     <description>Banking System Project utilizing Modular-Monolith and Clean Architecture Principals</description>
+
     <modules>
         <module>app</module>
         <module>account</module>
@@ -15,44 +16,13 @@
         <module>loan</module>
         <module>customer</module>
         <module>transaction</module>
+        <module>parent-bom</module>
     </modules>
+
     <properties>
         <java.version>21</java.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <org.springframework.boot.version>3.2.5</org.springframework.boot.version>
     </properties>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-                <version>${org.springframework.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <version>${org.springframework.boot.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${org.springframework.boot.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <build>
-        <pluginManagement>
-                <plugins>
-                    <plugin>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-maven-plugin</artifactId>
-                        <version>${org.springframework.boot.version}</version>
-                    </plugin>
-                </plugins>
-        </pluginManagement>
-    </build>
+    
 </project>
